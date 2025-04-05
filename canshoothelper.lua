@@ -33,8 +33,7 @@ CanShootHelper.Internal.CallbackEntries = {
                     return
                 end
             end
-        end,
-        0
+        end
     }
 }
 
