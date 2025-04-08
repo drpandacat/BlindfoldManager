@@ -41,10 +41,10 @@ end
 ---@param canShoot boolean
 ---@param identifier string
 function BlindfoldManager:SetCanShoot(player, canShoot, identifier)
-    local data = BlindfoldManager.Internal:GetData(player)
+    local data = player:GetData()
 
     data.__BLINDFOLD_MANAGER = data.__BLINDFOLD_MANAGER or {}
-    data.__BLINDFOLD_MANAGER[identifier] = canShoot
+    data.__BLINDFOLD_MANAGER[identifier] = not canShoot
 
     if not canShoot then return end
 
